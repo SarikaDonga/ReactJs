@@ -1,18 +1,21 @@
 import React from 'react'
-import Count from './Count'
+import Count_var from './Count_var'
 import NameInput from './NameInput'
 import InputChange from './InputChange'
 import TodoList from './TodoList'
 import TodoListObject from './TodoListObject'
+import ChangeName from './ChangeName'
+import Main from './Props/Main'
 const Topic5 = () => {
   return (
     <div>
-      {/* <Count/> */}
       {/* <InputChange/> */}
       {/* <NameInput/> */}
+      {/* <Count_var/> */}
       {/* <TodoList/> */}
-      <TodoListObject/>
-      
+      {/* <TodoListObject/> */}
+    {/* <ChangeName/> */}
+      <Main/>
 
     </div>
 

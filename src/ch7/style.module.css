@@ -1,0 +1,9 @@
+.b1{
+    background-color: green;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 10px;
+    border: none;
+    outline: none;
+}
