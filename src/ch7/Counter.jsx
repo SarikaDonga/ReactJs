@@ -1,20 +1,31 @@
-import React from 'react'
-import { useState ,useEffect} from 'react';
+import React, { useState } from 'react'
 
 const Counter = () => {
-    const [count, setCount] = useState(0);
-    
+    const [no, setNo] = useState(0)
+    const [add, setAdd] = useState()
 
-    useEffect(() => {
-        document.title = `Count: ${count}`; // Update the  title
-      }, [count]); // Re-run this effect when the count changes
-    
-   
+    let inc = () => {
+        setNo(no + add)
+    }
+
+    let dec = () => {
+        if (no > 0) {
+            setNo(no - add)
+        }
+    }
+    let reset = () => {
+        setNo(0)
+    }
     return (
         <div>
 
-            {count}
-            <button onClick={()=>setCount(count+1)}>Increement</button>
+
+            <input type="number" name="" id="" onChange={(e) => setAdd(Number(e.target.value))} ></input>
+            <button onClick={inc} disabled={no >= 100}>Increement</button>
+            {no}
+            <button onClick={dec} disabled={no <= 0}>Decreement</button>
+            <button onClick={reset}>Reset</button>
+
         </div>
     )
 }
