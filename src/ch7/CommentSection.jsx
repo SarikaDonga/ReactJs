@@ -7,29 +7,31 @@ const CommentSection = () => {
   const [comment, setComment] = useState('');
   const [error, setError] = useState('');
 
-  // Submit Handler
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Validation for empty fields
     if (!name || rating === 0 || !comment) {
       setError('Please fill in all fields.');
       return;
     }
-
-    // Add the review
+  
+    // Create newReview with correct data
     const newReview = {
-      name: '',
-      rating: '',
-      comment: ''
+      name: name,
+      rating: Number(rating), // Ensure rating is a number
+      comment: comment
     };
+    
     setReviews([...reviews, newReview]);
-
-    // clear
+  
+    // Clear form fields after submission
     setName('');
     setRating(0);
     setComment('');
     setError('');
   };
-
+  
   return (
     <div className="comment-section">
       <h2>Leave a Review</h2>
