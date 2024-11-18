@@ -23,6 +23,9 @@ function App() {
 
       {/* useEffcet */}
       <Topic7 />
+
+          <HocRed cmpo={ClickCounter1}/>
+     <HocGreen cmpo={ClickCounter1}/>
     </>
 
   );
