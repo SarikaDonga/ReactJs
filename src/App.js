@@ -4,7 +4,9 @@ import Topic4 from './ch4/Topic4';
 import Topic5 from './ch5/Topic5';
 import Topic7 from './ch7/Topic7';
 import Main_Class from './ClassComponents/Main_Class';
-
+import ClickCounter1 from './HOC/ClickCounter1';
+import HocRed from './HOC/HocRed';
+import HocGreen from './HOC/HocGreen';
 
 function App() {
   return (
